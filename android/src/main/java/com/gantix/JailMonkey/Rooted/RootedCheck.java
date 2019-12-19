@@ -26,6 +26,6 @@ public class RootedCheck {
     private static boolean rootBeerCheck(Context context) {
         RootBeer rootBeer = new RootBeer(context);
         
-        return rootBeer.isRootedWithoutBusyBoxCheck();
+        return rootBeer.checkForRWPaths() || rootBeer.checkSuExists() || rootBeer.checkForRootNative();
     }
 }
